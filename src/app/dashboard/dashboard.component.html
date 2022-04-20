@@ -1,0 +1,12 @@
+<header>
+<a class="logo" routerLink='/dashboard'>HomeApp</a>
+<nav>
+    <ul class="navbar">
+        <li><a routerLink='weekplan'> WeekPlan </a></li>
+        <li><a routerLink='recepies'> Recepies </a></li>
+        <li><a routerLink='shoplist'> Shoplist </a></li>
+        <li><a (click)="logout()" routerLinkActive="active"> Logout</a></li>
+    </ul>
+</nav>
+</header>
+<router-outlet></router-outlet>

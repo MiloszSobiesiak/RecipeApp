@@ -1,0 +1,80 @@
+<div class="main">
+   <div class="main list">
+      <h1>List of recepies:</h1>
+      <a (click)="add=0"><li>Add Recepie</li></a>
+      <ng-container *ngFor="let ingr of receplist" >
+      <li (click)="getRecepie(ingr.name);add=2">{{ingr.name}} <button>X</button></li>
+      </ng-container>   
+   </div>
+   <div class="main info">
+   <div class="add" [ngSwitch]="add">
+      <div class="first" *ngSwitchCase="0">
+         <div class="form">
+         <h1>Add Recepie:</h1><br>
+         <h2>Name: </h2>
+         <input class="inputname" type="text" [(ngModel)]="namedish"><br>
+         <h2>Description: </h2>
+         <input  class="description" type="text" [(ngModel)]="amount"><br>
+         <h2>Category:</h2>
+         <select class="category" name="category" [(ngModel)]="categorydish">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+         </select><br>
+         <button type="button" (click)="addRecepie();add=+1">Add Ingridients</button><br>
+      </div>
+      </div>
+      <div class="second" *ngSwitchCase="1">
+         <div class="form">
+         <h1>Add Ingridients</h1><br>
+         <h2>Name:</h2>
+         <input class="inputname" type="text" [(ngModel)]="name"><br>
+         <h2>Amount:</h2>
+         <input class="amount" type="text" [(ngModel)]="amount"><br>
+         <h2>Unit:</h2>
+         <select class="unit" name="units" [(ngModel)]="unit">
+            <option value="Grams">Grams</option>
+            <option value="Number">Number</option>
+         </select><br>
+         <button type="button" (click)="addIngredient()">Add Another Ingredient</button><br>
+      </div>
+         <div class="preview">
+         <h1>List of ingridients:</h1><br>
+         <div class="table">
+            <table  >
+              <tr>
+                <th style="width:40%">Name</th>
+                <th style="width:40%">Amount</th>
+                <th style="width:40%">Unit</th>
+              </tr>
+              <tr class="border_bottom" *ngFor="let item of preview">
+                <td>{{item.name}}</td>
+                <td>{{item.amount}}</td>
+                <td>{{item.unit}}</td>
+              </tr>
+          </table>
+         </div>
+      </div>
+   </div>
+      <div class="desc"  *ngSwitchCase="2">
+         <div class="table">
+            <table >
+              <tr>
+                <th style="width:30%">Name</th>
+                <th style="width:30%">Amount</th>
+                <th style="width:25%">Unit</th>
+              </tr>
+              <tr class="border_bottom" *ngFor="let item of recepitems">
+                <td *ngIf="item.name!='Opis'">{{item.name}}</td>
+                <td *ngIf="item.name!='Opis'">{{item.amount}}</td>
+                <td *ngIf="item.name!='Opis'">{{item.unit}}</td>
+              </tr>
+            </table>
+          <span class = "opis" *ngFor="let item of recepitems">
+             <p id="title" *ngIf="item.name==='Opis'">Recepie:</p><br>
+             <p id="text" *ngIf="item.name==='Opis'">{{item.amount}}</p>
+          </span> 
+         </div>
+      </div>
+   </div>
+   </div>
+</div>

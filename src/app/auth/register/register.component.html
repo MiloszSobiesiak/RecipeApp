@@ -1,0 +1,11 @@
+<div>
+    <form>
+        <h1>Register</h1>
+        <label >Email</label>
+        <input type="email" name="email" [(ngModel)]="email"><br>
+        <label >Password</label>
+        <input type="password"  name="password" [(ngModel)]="password"><br>
+        <a href="/register"><span>Register</span></a><br>
+        <button type="button" (click)="register()">Register</button>
+    </form>
+</div>
