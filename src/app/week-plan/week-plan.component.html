@@ -1,8 +1,18 @@
+<div class="buttons">
+    
+    <button type="button" (click)="save()">Save Plan</button>
+    <button type="button" (click)="clear()">Clear Plan</button>
+  
+</div>
+<div class="text">
+    <p class="info">If you want make a new plan, first use button "Clear", add all elemens and then press "Save"</p><br>
+</div>
+
 <div class="main">
 <div class="days" *ngFor="let day of weekdays">
-    <p>{{day.day}}</p>
+    <p class="weekday">{{day.day}}</p>
     <span>   
-        <p>Breakfast:</p>
+        <p class="meals">Breakfast:</p>
         <select class="breakfast"[(ngModel)]="day.breakfast">
         <ng-container *ngFor="let recep of receplist">
         <option  *ngIf="recep.category==='Breakfast'" value={{recep.name}}>{{recep.name}}</option>
@@ -10,15 +20,15 @@
      </select><br>
     </span>
     <span>   
-        <p>Work:</p>
+        <p class="meals">Work:</p>
         <select class="work"[(ngModel)]="day.work">
         <ng-container *ngFor="let recep of receplist">
         <option  *ngIf="recep.category==='Breakfast'" value={{recep.name}}>{{recep.name}}</option>
         </ng-container>
      </select><br>
     </span>
-    <span>   
-        <p>Lunch:</p>
+    <span >   
+        <p class="meals">Lunch:</p>
         <select class="Lunch"[(ngModel)]="day.lunch">
         <option> Other </option>
         <option> Eating out </option>
@@ -28,7 +38,7 @@
      </select><br>
     </span>
     <span>   
-        <p>Dinner:</p>
+        <p class="meals">Dinner:</p>
         <select class="Dinner" [(ngModel)]="day.dinner">
         <option> Other </option>
         <option> Eating out </option>
@@ -37,6 +47,4 @@
     </span>
 </div>
 </div>
-<button type="button" (click)="save()">Save</button>
-<button type="button" (click)="load()">Load</button>
-<button type="button" (click)="clear()">Clear</button>
+

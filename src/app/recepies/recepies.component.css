@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap');
+
 .main{
     position: relative;
     float: left;
     width: 100vw;
+    font-family: 'Oswald', sans-serif;
 }
 .list{
     width: 20%;
@@ -10,7 +13,10 @@
 .list li{
     position: relative;
     list-style-type: none;
-    left: 8%
+    font-size: 1.3rem;
+    left: 8%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 .list li:hover{
     color: red;
@@ -22,7 +28,7 @@
 .info h1{
     position:relative;
     display: inline;
-    color: red;
+    color: black;
 }
 .first .form{
 display: inline;
@@ -41,9 +47,16 @@ left: 4%;
 }
 .first .inputname{
     width:270px;
+    text-align: right;
 }
 .first .description{
-    width:190px;
+    width:208px;
+    text-align: right;
+}
+
+.first .category{
+    width:240px;
+    text-align: right;
 }
 
 
@@ -69,11 +82,11 @@ left: 4%;
         margin-top:10px ;
     }
 .second .inputname{
-        width:270px;
+        width:277px;
         text-align: right;
     }
 .second .amount{
-        width:239px;
+        width:254px;
         text-align: right;
     }
 .second .unit{
@@ -114,12 +127,12 @@ left: 4%;
 .desc .opis #title{
     font-size: 2rem;
     margin-top: 50px;
-    color:blue;
+    color:black;
 
 }
 .desc .opis #text{
     font-size: 1.5rem;
-    color:green;
+    color:black;
 
   
 }

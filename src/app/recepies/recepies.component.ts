@@ -31,9 +31,11 @@ export class RecepiesComponent implements OnInit {
   recepitems: Recepie[]=[]
   add:number = 0;
   preview: Recepie[] = [ ]
+  userid: string = '';
 
-
-  constructor(private auth: AuthService, private data: DataService, private auth1: AngularFireAuth) { }
+  constructor(private auth: AuthService, private data: DataService, private auth1: AngularFireAuth) { 
+    
+  }
 
   ngOnInit() {
    this.getAllRecepies();
@@ -65,7 +67,6 @@ export class RecepiesComponent implements OnInit {
     this.recepie.unit = this.unit;
     this.dishname.name = this.namedish;
     this.preview.push(this.recepie)
-    console.log( this.preview, this.recepie)
     this.data.addIngredient(this.dishname, this.recepie)
     this.amount = '';
     this.name = '';
@@ -73,18 +74,13 @@ export class RecepiesComponent implements OnInit {
 
 
   getRecepie(name:string){
-    console.log(name)
     this.data.getRecepie(name).subscribe(user =>{
       this.recepitems = user as Recepie[];
       this.recepitems = Object.values(this.recepitems)
-      console.log(this.recepitems, "Nasz obiekcik")
   
       }, err => {
         alert('Error while fetching student data');
       })
   }
 
-  showRecepie(){
-
-  }
 }

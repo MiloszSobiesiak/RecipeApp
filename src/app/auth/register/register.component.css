@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(94,146,242);
+    background: radial-gradient(circle, rgba(94,146,242,1) 46%, rgba(18,87,217,1) 71%);
+}
+h1{
+    color:#BDD2FA;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 5.5em;
+    margin-bottom: 20%;
+}
+form{
+    position: relative;
+}
+button{
+    position: relative;
+    top:10px;
+    left: 80px;
+}
+
+label{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+
+}
+input[type="email"],[type="password"]
+{   
+    width: 230px;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    color: black;
+}

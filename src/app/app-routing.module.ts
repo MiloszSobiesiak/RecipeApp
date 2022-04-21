@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'dashboard', component : DashboardComponent, canActivate:[AuthGuard],
   children:[
     {path: 'supplies', component : SuppliesComponent},
-    {path: 'recepies', component : RecepiesComponent},
+    {path: 'recipes', component : RecepiesComponent},
     {path: 'weekplan', component : WeekPlanComponent},
     {path: 'shoplist', component : ShopListComponent},
   ]

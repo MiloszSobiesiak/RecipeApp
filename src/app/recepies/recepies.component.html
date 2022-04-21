@@ -1,16 +1,16 @@
 <div class="main">
    <div class="main list">
-      <h1>List of recepies:</h1>
-      <a (click)="add=0"><li>Add Recepie</li></a>
+      <h1>List of recipes:</h1>
+      <a (click)="add=0"><li>Add Recipe</li></a>
       <ng-container *ngFor="let ingr of receplist" >
-      <li (click)="getRecepie(ingr.name);add=2">{{ingr.name}} <button>X</button></li>
+      <li (click)="getRecepie(ingr.name);add=2">{{ingr.name}}  </li> 
       </ng-container>   
    </div>
    <div class="main info">
    <div class="add" [ngSwitch]="add">
       <div class="first" *ngSwitchCase="0">
          <div class="form">
-         <h1>Add Recepie:</h1><br>
+         <h1>Add Recipe:</h1><br>
          <h2>Name: </h2>
          <input class="inputname" type="text" [(ngModel)]="namedish"><br>
          <h2>Description: </h2>
@@ -70,7 +70,7 @@
               </tr>
             </table>
           <span class = "opis" *ngFor="let item of recepitems">
-             <p id="title" *ngIf="item.name==='Opis'">Recepie:</p><br>
+             <p id="title" *ngIf="item.name==='Opis'">Recipe:</p><br>
              <p id="text" *ngIf="item.name==='Opis'">{{item.amount}}</p>
           </span> 
          </div>

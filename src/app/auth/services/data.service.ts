@@ -21,7 +21,7 @@ export class DataService {
 
 
   getAllRecepies() {
-    return this.http.get('https://homeapp-8e8f9-default-rtdb.europe-west1.firebasedatabase.app/'+this.userid+'/Recepies/list.json').pipe(tap(console.log))
+    return this.http.get('https://homeapp-8e8f9-default-rtdb.europe-west1.firebasedatabase.app/'+this.userid+'/Recepies/list.json')
   }
 
   addRecepie(zmienna: Nazwa ,recepie : Recepie) {
@@ -46,6 +46,9 @@ export class DataService {
     return this.http.post('https://homeapp-8e8f9-default-rtdb.europe-west1.firebasedatabase.app/'+this.userid+'/Recepies/'+zmienna.name+'.json', recepie ).subscribe(responseData => {
       console.log(responseData);
     });
+  }
+    deleterecepie(zmienna:string){
+    return this.http.delete('https://homeapp-8e8f9-default-rtdb.europe-west1.firebasedatabase.app/'+this.userid+'/Recepies/'+zmienna+'.json').subscribe()
   }
 
   saveweekplan(day:WeekDay){
