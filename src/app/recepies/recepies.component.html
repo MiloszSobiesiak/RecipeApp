@@ -20,12 +20,12 @@
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
          </select><br>
-         <button type="button" (click)="addRecepie();add=+1">Add Ingridients</button><br>
+         <button type="button" (click)="addRecepie();add=+1">Add Ingredients</button><br>
       </div>
       </div>
       <div class="second" *ngSwitchCase="1">
          <div class="form">
-         <h1>Add Ingridients</h1><br>
+         <h1>Add Ingredients</h1><br>
          <h2>Name:</h2>
          <input class="inputname" type="text" [(ngModel)]="name"><br>
          <h2>Amount:</h2>
@@ -38,7 +38,7 @@
          <button type="button" (click)="addIngredient()">Add Another Ingredient</button><br>
       </div>
          <div class="preview">
-         <h1>List of ingridients:</h1><br>
+         <h1>List of ingredients:</h1><br>
          <div class="table">
             <table  >
               <tr>
