@@ -19,4 +19,4 @@ Password:test123
 
 ## Future plans
 -create mobile app <br>
--applying a better database <br>
+-apply a better database <br>
