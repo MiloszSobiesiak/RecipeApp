@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap');
 .main{
     flex-wrap:wrap;
     justify-content:space-around;
     display: flex;
+    font-family: 'Oswald', sans-serif;
 }
 
 .days{
-    
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    margin-top: 10px;
+
+}
+.weekday{
+    font-size: 2rem;
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+}
+.text .info{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
 }

@@ -22,6 +22,7 @@ export interface WeekDay{
     dinner:string
 }
 export interface shoplist{
-    [name: string]: number;
+    name : string,
+    number: number
 }
  

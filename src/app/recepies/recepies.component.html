@@ -3,7 +3,7 @@
       <h1>List of recepies:</h1>
       <a (click)="add=0"><li>Add Recepie</li></a>
       <ng-container *ngFor="let ingr of receplist" >
-      <li (click)="getRecepie(ingr.name);add=2">{{ingr.name}} <button>X</button></li>
+      <li (click)="getRecepie(ingr.name);add=2">{{ingr.name}}  </li> 
       </ng-container>   
    </div>
    <div class="main info">

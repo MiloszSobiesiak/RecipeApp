@@ -17,13 +17,12 @@ login(email : string, password : string) {
       localStorage.setItem('token','true');
 
       if(res.user?.emailVerified == true) {
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['dashboard/weekplan']);
       } else {
-       console.log("Dupa")
       }
 
   }, err => {
-      alert(err.message);
+      alert("Wrong login or password!");
       this.router.navigate(['/login']);
   })
 }
@@ -31,11 +30,11 @@ login(email : string, password : string) {
 // register method
 register(email : string, password : string) {
   this.fireauth.createUserWithEmailAndPassword(email, password).then( res => {
-    alert('Registration Successful');
+    alert("Verification email sent!");
     this.sendEmailForVarification(res.user);
     this.router.navigate(['/login']);
   }, err => {
-    alert(err.message);
+    alert("err.message");
     this.router.navigate(['/register']);
   })
 }

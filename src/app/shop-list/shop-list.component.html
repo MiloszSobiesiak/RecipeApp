@@ -1,1 +1,11 @@
-<p>shop-list works!</p>
+<div class="table">
+    <table >
+      <tr>
+        <th >Name</th>
+        <th>Amount</th>
+      </tr>
+      <tr *ngFor="let item of shoplist">
+        <td *ngIf="item.name!=''">{{item.name}}</td>
+        <td *ngIf="item.name!=''">{{item.number}}</td>
+      </tr>
+    </table>
