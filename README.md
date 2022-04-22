@@ -12,7 +12,7 @@ Logging in and creating an account is done using the authorization firebase. Rea
 ## Instruction 
 At the moment, it is not possible to delete or edit recipes (it is related to database problems). When creating a new plan, delete the old one, complete all fields and create a new one. It is not possible to edit, in case of a mistake you have to start over.
 
-Link: soon<br>
+Link: https://homeapp-8e8f9.firebaseapp.com/login<br>
 
 
 Test account:<br>
